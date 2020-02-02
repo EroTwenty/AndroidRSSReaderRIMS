@@ -1,4 +1,4 @@
-package com.example.androidrssreader;
+package com.lprims.androidrssreader;
 
 import androidx.appcompat.app.AppCompatActivity;
 
