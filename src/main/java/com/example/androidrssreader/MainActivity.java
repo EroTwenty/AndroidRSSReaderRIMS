@@ -1,6 +1,8 @@
 package com.example.androidrssreader;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,21 +14,24 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
     protected String RSSURL = new String();
-    protected ImageButton settingsButton;
+    protected ImageButton refreshButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         RSSURL="https://www.jeuxvideo.com/rss/rss-ps4.xml";
-        settingsButton = (ImageButton) findViewById(R.id.rssSettingsButton);
-        settingsButton.setOnClickListener(new View.OnClickListener() {
+        refreshButton = (ImageButton) findViewById(R.id.reloadRssButton);
+        refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 readFromUrl(RSSURL);
             }
         });
-
-
+    }
+    public void gotoRSSSettings(View view)
+    {
+        Intent intent = new Intent(this, RSSSettingsActivity.class);
+        startActivity(intent);
     }
     public void readFromUrl(String inurl){
         try {
