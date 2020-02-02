@@ -1,4 +1,4 @@
-# AndroidRSSReaderRIMS0
+# AndroidRSSReaderRIMS
 Android RSSReaderRIMS project during LP RIMS 2020
 
 
