@@ -12,7 +12,10 @@ public class RssReader {
     public RssReader(String url) {
         rssUrl = url;
     }
-
+    public void setUrl(String url)
+    {
+        rssUrl=url;
+    }
     public List<RssItem> getItems() throws Exception {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser saxParser = factory.newSAXParser();
