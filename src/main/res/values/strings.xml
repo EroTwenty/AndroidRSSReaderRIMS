@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidRSSReader</string>
+    <string name="rss_settings">RSS Settings</string>
 </resources>
