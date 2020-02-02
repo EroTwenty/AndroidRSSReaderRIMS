@@ -31,12 +31,20 @@
         app:srcCompat="@mipmap/reload" />
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="408dp"
-        android:layout_height="729dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ListView
+        android:id="@+id/rssView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="642dp"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:divider="@android:color/holo_green_light"
+        android:dividerHeight="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/rssSettingsButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <!-- Below layout xml is used for each ListView's item.-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
