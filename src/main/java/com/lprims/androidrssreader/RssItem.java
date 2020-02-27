@@ -37,4 +37,16 @@ public class RssItem {
     public void setTitle(String title) {
         this.title = title;
     }
+    public String toString()
+    {
+        return "Titre :"+title+" desc : "+description+" link : "+link;
+    }
+
+    public void debugRssItem()
+    {
+        System.out.println("Le titre est "+title);
+        System.out.println("La desc est "+description);
+        System.out.println("Le lien est :"+link);
+        System.out.println("L'URL de l'image est :"+imageUrl);
+    }
 }
