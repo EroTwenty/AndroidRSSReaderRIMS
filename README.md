@@ -11,9 +11,9 @@ Jaason Gallet
 
 
 DEMO VIDEO OF THE APP : ➡️ https://streamable.com/hgl0x ⬅️      
-Notice :
+Notice :    
 
-Homepage of the Application
+Homepage of the Application    
 ![alt text](https://i.imgur.com/M6ZIoK8.png)    
 
 When you load an RSS FEED :    
