@@ -14,12 +14,12 @@ DEMO VIDEO OF THE APP : ➡️ https://streamable.com/hgl0x ⬅️
 Notice :
 
 Homepage of the Application
-![alt text](https://i.imgur.com/M6ZIoK8.png)
+![alt text](https://i.imgur.com/M6ZIoK8.png)    
 
-When you load an RSS FEED :
+When you load an RSS FEED :    
 
-![alt text](https://i.imgur.com/jIIzZXX.png)
+![alt text](https://i.imgur.com/jIIzZXX.png)    
 
-Settings page :
+Settings page :    
 
-![alt text](https://i.imgur.com/K4coVBY.png)
+![alt text](https://i.imgur.com/K4coVBY.png)    
