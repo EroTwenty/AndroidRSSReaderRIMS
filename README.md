@@ -6,9 +6,12 @@ Group :
 Lorenzo Verbrugghe (EroTwenty)    
 Tom Fonvielhe (tomfonvielhe)    
 Damien Baetens  (dbaetens)    
-S̶t̶e̶v̶e̶n̶ ̶D̶e̶f̶r̶a̶n̶c̶e̶ ̶ ̶(̶W̶a̶p̶o̶k̶y̶a̶)̶  DEMISSION    
+Steven Defrance (Wapokya)       
 Jaason Gallet (Paurek)    
 
+
+The application is able to open and show RSS feeds from URLs, it saves the last RSS URL you entered, when you go back in the app.
+When you click on an item in the list, it brings you to the Website link on your browser     
 
 DEMO VIDEO OF THE APP : ➡️ https://streamable.com/hgl0x ⬅️      
 Notice :    
