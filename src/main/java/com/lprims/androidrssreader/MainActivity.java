@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.LauncherActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected String RSSURL = new String(); //url du flux Rss
     protected ImageButton refreshButton; //bouton refresh (en bas à gauche)
     protected ArrayList<RssItem> rssItems; // array contenant des rssItems
+    protected String[] linksList;
     protected ListView rssList;
     protected ArrayAdapter<String> adapter;
     protected int LAUNCH_SETTINGS_ACTIVITY = 1;
@@ -43,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
                     StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-        RSSURL="https://www.jeuxacstu.com/rss/ja.rss";
+
+        RSSURL="https://www.jeuxactu.com/rss/ja.rss";
         rssReader = new RssReader(RSSURL);
         adapter = new ArrayAdapter<String>(this,R.layout.rss_feed,R.id.textview);
         rssList = (ListView) findViewById(R.id.rssView);
@@ -53,6 +57,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                  refreshRssItems();
                  refreshRssList();
+            }
+        });
+        rssList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //String url = linksList[position];
+                String url = linksList[position];
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
             }
         });
     }
@@ -78,20 +93,15 @@ public class MainActivity extends AppCompatActivity {
         if(rssItems != null)
         {
             adapter.clear();
+            linksList=new String[rssItems.size()];
             for (int i=0 ; i < rssItems.size() ; i++)
             {
-
+                linksList[i]=rssItems.get(i).link;
                 adapter.add(rssItems.get(i).title);
-            /*adapter.add(rssItems.get(i).link);
-            adapter.add(rssItems.get(i).imageUrl);
-            adapter.add(rssItems.get(i).description);*/
                 adapter.notifyDataSetChanged();
                 rssList.setAdapter(adapter);
-                System.out.println("Titre : " + rssItems.get(i).title);
-                System.out.println("Lien : " + rssItems.get(i).link);
-                System.out.println("Image URL : " + rssItems.get(i).imageUrl);
-                System.out.println("Description : " + rssItems.get(i).description);
             }
+
         }
 
     }
@@ -109,14 +119,13 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == LAUNCH_SETTINGS_ACTIVITY) {
             if (resultCode == Activity.RESULT_OK) {
-                System.out.println(data.getStringExtra("RSS_FEED_URL_BACK"));
                 RSSURL = data.getStringExtra("RSS_FEED_URL_BACK");
             }
             if (resultCode == Activity.RESULT_CANCELED) {
-                //Write your code if there's no result
+
             }
         }
-    }//onActivityResult
+    }
 
 
 
