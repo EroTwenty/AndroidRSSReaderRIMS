@@ -10,7 +10,7 @@ Steven Defrance
 Jaason Gallet  
 
 
-DEMO VIDEO OF THE APP : https://streamable.com/hgl0x
+DEMO VIDEO OF THE APP : https://streamable.com/hgl0x    
 Notice :
 
 Homepage of the Application
