@@ -3,11 +3,11 @@ Android RSSReaderRIMS project during LP RIMS 2020
 
 
 Group :  
-Lorenzo Verbrugghe (EroTwenty)
-Tom Fonvielhe (tomfonvielhe)
-Damien Baetens  (dbaetens)
+Lorenzo Verbrugghe (EroTwenty)    
+Tom Fonvielhe (tomfonvielhe)    
+Damien Baetens  (dbaetens)    
 S̶t̶e̶v̶e̶n̶ ̶D̶e̶f̶r̶a̶n̶c̶e̶ ̶ ̶(̶W̶a̶p̶o̶k̶y̶a̶)̶  DEMISSION    
-Jaason Gallet (Paurek)
+Jaason Gallet (Paurek)    
 
 
 DEMO VIDEO OF THE APP : ➡️ https://streamable.com/hgl0x ⬅️      
